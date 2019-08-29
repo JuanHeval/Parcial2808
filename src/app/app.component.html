@@ -319,11 +319,11 @@
 
 <div class="disflex">
   <ul>
-    <ng-container >
       <li>
-        Nombre
-      </li>
-      <li *ngFor="let elemento of elementos; let i= index">
+          Nombre
+        </li>
+    <ng-container *ngFor="let elemento of elementos; let i= index" [ngSwitch]= "elemento.catego">
+      <li [ngStyle]="{color: (elemento.boool) ? 'green' : 'blue'}">
           {{elemento.nombre}}  
       </li> 
     </ng-container>
@@ -355,6 +355,28 @@
           </li>
       <li *ngFor="let elemento of elementos; let i= index">
             {{elemento.Peso}}
+      </li> 
+    </ng-container>
+</ul>
+<ul>
+    <ng-container >
+        <li>
+            Metal de transición
+          </li>
+      <li *ngFor="let elemento of elementos; let i= index" [ngSwitch]= "elemento.metal">
+          <span *ngSwitchCase=1>Si</span>
+          <span *ngSwitchCase=2>No</span>
+      </li> 
+    </ng-container>
+</ul>
+<ul>
+    <li>
+        Categoría
+        <li >
+    <ng-container *ngFor="let elemento of elementos; let i= index" [ngSwitch]= "elemento.catego">
+        
+      <li >
+            {{elemento.catego}}
       </li> 
     </ng-container>
 </ul>
