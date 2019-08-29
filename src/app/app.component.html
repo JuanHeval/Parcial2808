@@ -301,6 +301,10 @@
     display: flex;
     flex: 1;
   }
+  .disflex {
+    display: flex;
+    flex: 1;
+  }
 </style>
 
 <div class="padre">
@@ -311,6 +315,37 @@
 
 <div class="MiCorreo">
   <h1>juanm-henaov@unilibre.edu.co</h1>
+</div>
+
+<div class="disflex">
+  <ul>
+    <ng-container >
+      <li *ngFor="let elemento of elementos; let i= index">
+          {{elemento.nombre}}  
+      </li> 
+    </ng-container>
+</ul>
+<ul>
+    <ng-container >
+      <li *ngFor="let elemento of elementos; let i= index">
+          {{elemento.simbolo}}
+      </li> 
+    </ng-container>
+</ul>
+<ul>
+    <ng-container >
+      <li *ngFor="let elemento of elementos; let i= index">
+          {{elemento.numeroat}}  
+      </li> 
+    </ng-container>
+</ul>
+<ul>
+    <ng-container >
+      <li *ngFor="let elemento of elementos; let i= index">
+            {{elemento.Peso}}
+      </li> 
+    </ng-container>
+</ul>
 </div>
 
 
